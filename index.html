@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;700&family=Sofia+Sans:wght@100;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 
 		<!-- Google tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-00ZKQL2VSV">
@@ -30,12 +31,13 @@
                 background-color: #d4fffb;
                 font-family: 'Sofia Sans', sans-serif;
                 color: #02124f;
-                max-width: 1000px;
+                max-width: 600px;
                 margin: auto;
+                width: 80%;
             }
 
             h1 {
-                font-family: 'Josefin Sans', sans-serif;
+                font-family: 'Graduate', 'Josefin Sans', sans-serif;
                 font-weight: bold;
             }
 
@@ -119,6 +121,7 @@
                 document.getElementById('results').innerHTML = 
                     '200m: ' + new Date(pace * 200 * 1000).toISOString().slice(11, 19) +
                     '<br>400m: ' + new Date(pace * 400 * 1000).toISOString().slice(11, 19) +
+                    '<br>800m: ' + new Date(pace * 800 * 1000).toISOString().slice(11, 19) +
                     '<br>Mile: ' + new Date(pace * 1609.34 * 1000).toISOString().slice(11, 19) +
                     '<br>5k: ' + new Date(pace * 5000 * 1000).toISOString().slice(11, 19) +
                     '<br>10k: ' + new Date(pace * 10000 * 1000).toISOString().slice(11, 19) +
@@ -165,11 +168,11 @@
             <!-- Distance --> 
             <!-- ######## -->
             <h2 class="text-center col-sm-12">Distance</h2>
-            <div class='form-group col-sm-6'>
+            <div class='form-group col-sm-12'>
                 <input id='distance' type='number' class='form-control' step='any' min='0' placeholder='Distance'>
             </div>
 
-            <div class='form-group col-sm-6'>
+            <div class='form-group col-sm-12'>
                 <label for='units'></label>
                 <select name="units" id='distance_units'>
                     <option value='mi'>Miles</option>
@@ -183,13 +186,13 @@
             <!-- #### -->
             <h2 class="text-center col-sm-12">Pace</h2>
 
-            <div class='form-group col-sm-2'>
+            <div class='form-group col-sm-4'>
                 <input id='pace_hr' type='number' class='form-control' step='any' min='0' placeholder='Hr'>
             </div>
-            <div class='form-group col-sm-2'>
+            <div class='form-group col-sm-4'>
                 <input id='pace_min' type='number' class='form-control' step='any' min='0' max='59' placeholder='Min'>
             </div>
-            <div class='form-group col-sm-2'>
+            <div class='form-group col-sm-4'>
                 <input id='pace_sec' type='number' class='form-control' step='any' min='0' max='59' placeholder='Sec'>
             </div>
 
@@ -207,13 +210,13 @@
             <!-- ########## -->
             <h2 class="text-center col-sm-12">Total Time</h2>
 
-            <div class='form-group col-sm-2'>
+            <div class='form-group col-sm-4'>
                 <input id='totaltime_hr' type='number' class='form-control' step='any' min='0' placeholder='Hr'>
             </div>
-            <div class='form-group col-sm-2'>
+            <div class='form-group col-sm-4'>
                 <input id='totaltime_min' type='number' class='form-control' step='any' min='0' max='59' placeholder='Min'>
             </div>
-            <div class='form-group col-sm-2'>
+            <div class='form-group col-sm-4'>
                 <input id='totaltime_sec' type='number' class='form-control' step='any' min='0' max='59' placeholder='Sec'>
             </div>
             <div class='col-sm-12'>
@@ -235,8 +238,8 @@
             </div>
 
 
-            <div class='col-sm-12'>
-                <button type='button' class='btn' onclick='chooseCalc()'>Submit</button>
+            <div id='submit-button' class='col-sm-12'>
+                <button type='button' class='btn btn-primary btn-lg btn-block' onclick='chooseCalc()'>Submit</button>
             </div>
         </form>
 
