@@ -240,7 +240,8 @@
 
 
             <div id='submit-button' class='col-sm-12'>
-                <button type='button' class='btn btn-primary btn-lg btn-block' onclick='chooseCalc()'>Submit</button>
+                <!-- return false with the method call allows enter key to toggle the button but not refresh the page -->
+                <button  class='btn btn-primary btn-lg btn-block' onclick='chooseCalc(); return false;'>Submit</button>
             </div>
         </form>
 
