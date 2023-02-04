@@ -211,42 +211,48 @@
             <!-- ########## -->
             <h2 class="text-center col-sm-12">Total Time</h2>
 
-            <div class='form-group col-sm-4'>
+            <div class='form-group col-md-4'>
                 <input id='totaltime_hr' type='number' class='form-control' step='any' min='0' placeholder='Hr'>
             </div>
-            <div class='form-group col-sm-4'>
+            <div class='form-group col-md-4'>
                 <input id='totaltime_min' type='number' class='form-control' step='any' min='0' max='59' placeholder='Min'>
             </div>
-            <div class='form-group col-sm-4'>
+            <div class='form-group col-md-4'>
                 <input id='totaltime_sec' type='number' class='form-control' step='any' min='0' max='59' placeholder='Sec'>
             </div>
-            <div class='col-sm-12'>
+            <div class='col-md-12'>
             </div>
 
             <!-- ############# -->
             <!-- Radio Buttons --> 
             <!-- ############# -->
 
-            <h2 class="text-center col-sm-12">Select Calculation</h2>
-            <div class='form-group col-sm-4'>
+            <h2 class="text-center col-md-12">Select Calculation</h2>
+            <div class='form-group col-md-4'>
                 <label for='calculate'><input value='distance' name='calculate_what' type='radio' name='calculate' /> Calculate Distance</label>
             </div>
-            <div class='form-group col-sm-4'>
+            <div class='form-group col-md-4'>
                 <label for='calculate'><input value='pace' name='calculate_what' type='radio' name='calculate' /> Calculate Pace</label>
             </div>
-            <div class='form-group col-sm-4'>
+            <div class='form-group col-md-4'>
                 <label for='calculate'><input value=time id='calculate' type='radio' name='calculate_what' /> Calculate Total Time</label>
             </div>
 
 
-            <div id='submit-button' class='col-sm-12'>
-                <!-- return false with the method call allows enter key to toggle the button but not refresh the page -->
-                <button  class='btn btn-primary btn-lg btn-block' onclick='chooseCalc(); return false;'>Submit</button>
-            </div>
+            <div class='row'>
+                <div class='col-md-4'>
+                </div>
+                <div id='submit-button' class='col-md-4'>
+                    <!-- return false with the method call allows enter key to toggle the button but not refresh the page -->
+                    <button  class='btn btn-primary btn-lg btn-block' onclick='chooseCalc(); return false;'>Submit</button>
+                </div>
+                <div class='col-md-4'>
+                </div>
+            <div class='row'>
         </form>
 
-        <h2 class="text-center col-sm-12">Results</h2>
-        <div class='col-sm-12'>
+        <h2 class="text-center col-md-12">Results</h2>
+        <div class='col-md-12'>
             <p class='text-center' id='results'></p>
         </div>
     </body>
