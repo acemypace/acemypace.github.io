@@ -88,7 +88,7 @@
                 let totaltime_min = document.getElementById('totaltime_min').value;
                 let totaltime_sec = document.getElementById('totaltime_sec').value;
 
-                distance_meter_conversion = {'m': 1, 'km': 1000, 'mi': 1609.34};
+                distance_meter_conversion = {'m': 1, 'km': 1000, 'mi': 1609.34, 'half':21097.5, 'full': 42195};
 
                 // convert to seconds
                 pace = pace_hr * 3600 + pace_min * 60 + pace_sec * 1;
@@ -120,7 +120,7 @@
                 let totaltime_min = document.getElementById('totaltime_min').value;
                 let totaltime_sec = document.getElementById('totaltime_sec').value;
 
-                distance_meter_conversion = {'m': 1, 'km': 1000, 'mi': 1609.34};
+                distance_meter_conversion = {'m': 1, 'km': 1000, 'mi': 1609.34, 'half':21097.5, 'full': 42195};
 
                 // convert to meters
                 run_length = distance * distance_meter_conversion[distance_units];
@@ -151,7 +151,7 @@
                 let pace_sec = document.getElementById('pace_sec').value;
                 let pace_units = document.getElementById('pace_units').value;
 
-                distance_meter_conversion = {'m': 1, 'km': 1000, 'mi': 1609.34};
+                distance_meter_conversion = {'m': 1, 'km': 1000, 'mi': 1609.34, 'half': 21097.5, 'full': 42195};
 
                 // convert to meters
                 run_length = distance * distance_meter_conversion[distance_units];
@@ -192,6 +192,8 @@
                     <option value='mi'>Miles</option>
                     <option value='m'>Meters</option>
                     <option value='km'>Kilometers</option>
+                    <option value='half'>1/2 Marathons</option>
+                    <option value='full'>Marathons</option>
                 </select>
             </div>
 
